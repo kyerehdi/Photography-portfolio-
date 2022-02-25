@@ -1,0 +1,14 @@
+.list{
+    list-style: none;
+}
+.elements{
+    font-size: large;
+    font-family:normal;
+    font-weight: bold;
+margin-top:50%;
+text-decoration: underline;
+color: white;
+}
+.elements:hover{
+    transform: scale(1.1);
+}

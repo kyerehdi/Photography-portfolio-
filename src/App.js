@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import react from 'react';
 import './App.css';
+import Home from './components/Home';
+import { BrowserRouter as Router, Routes,Route} from 'react-router-dom';
+import Ural from './components/Ural';
+import Buis from './components/Buis';
+import Casual from './components/Casual';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ 
+    <Router>
+
+   <Routes> 
+   
+ <Route path="/" element={<Home />} />
+  <Route path="/ural" element={<Ural />} />
+  <Route path="/business" element={<Buis />} />
+  <Route path="/casual" element={<Casual />} />
+  <Route path="/contact" element={<Contact />} />
+ </Routes>
+ </Router>
+ 
   );
 }
 
